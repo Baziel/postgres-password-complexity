@@ -1,0 +1,3 @@
+[submodule "hey-dba-pgtle-pcidss"]
+	path = hey-dba-pgtle-pcidss
+	url = https://github.com/heydba/hey-dba-pgtle-pcidss/tree/main
