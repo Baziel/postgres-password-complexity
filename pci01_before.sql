@@ -1,0 +1,11 @@
+\c pwdb;
+CREATE SCHEMA pgtle;
+CREATE EXTENSION pg_tle;
+--\dx;
+ALTER DATABASE pwdb SET search_path TO postgres,pwdb,pgtle;
+GRANT pgtle_admin TO postgres;
+ALTER SYSTEM SET pgtle.passcheck_db_name TO 'pwdb';
+SELECT pg_catalog.pg_reload_conf();
+ALTER SYSTEM SET pgtle.enable_password_check TO 'on';
+SELECT pg_catalog.pg_reload_conf();
+--\dn;

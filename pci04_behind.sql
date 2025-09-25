@@ -1,0 +1,14 @@
+--already done via postgresql4.conf
+--ALTER SYSTEM SET pgtle.clientauth_users_to_skip TO 'postgres';
+--SELECT pg_catalog.pg_reload_conf();
+--ALTER SYSTEM SET pgtle.enable_clientauth TO 'on';
+--Require a restart
+--Context: SIGHUP. Note: A database restart is needed to enable the clientauth feature, i.e. to switch from off to on or require
+--
+--select name, setting, short_desc, context from pg_settings where name like 'pgtle%' order by 1;
+--SELECT * FROM pgtle.available_extensions();
+--SELECT * FROM pgtle.available_extension_versions();
+--SELECT * FROM pgtle.extension_update_paths('pci_password_check_rules');
+ALTER EXTENSION pci_password_check_rules UPDATE TO '0.4';
+--select pgtle.set_default_version('pci_password_check_rules', '0.4');
+--\dx

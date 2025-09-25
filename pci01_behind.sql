@@ -1,0 +1,1 @@
+CREATE EXTENSION pci_password_check_rules;

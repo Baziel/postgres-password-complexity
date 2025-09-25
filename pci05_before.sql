@@ -1,0 +1,1 @@
+--select pgtle.uninstall_update_path('pci_password_check_rules', '0.3', '0.4');
