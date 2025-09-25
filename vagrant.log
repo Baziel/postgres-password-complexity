@@ -1,4 +1,4 @@
-Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="238" LINES="58"]
+Script started on 2025-09-25 14:16:31+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="238" LINES="58"]
 [0mBringing machine 'default' up with 'virtualbox' provider...[0m
 [1m==> default: Importing base box 'rockylinux/10'...[0m
 [0m[K[0m[0mProgress: 30%[0m[0m[K[0m[0mProgress: 60%[0m[0m[K[0m[0mProgress: 90%[0m[0m[K[0m[1m==> default: Matching MAC address for NAT networking...[0m
@@ -27,7 +27,7 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
     default: in which case you may ignore this message.[0m
 [1m==> default: Setting hostname...[0m
 [1m==> default: Configuring and enabling network interfaces...[0m
-[1m==> default: Rsyncing folder: /opt/VagrantMachines/pg17/ => /vagrant[0m
+[1m==> default: Rsyncing folder: /opt/VagrantMachines/postgres-password-complexity/ => /vagrant[0m
 [1m==> default: Running provisioner: file...[0m
 [0m    default: ./systemctloverride => /tmp/systemctloverride[0m
 [1m==> default: Running provisioner: file...[0m
@@ -103,14 +103,14 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [1m==> default: Running provisioner: file...[0m
 [0m    default: ./pci_password_check_rules_0.6_up_0.5-0.6.sql => /tmp/pci_password_check_rules_0.6_up_0.5-0.6.sql[0m
 [1m==> default: Running provisioner: shell...[0m
-[0m    default: Running: /tmp/vagrant-shell20250924-1373127-pvcpe7.sh[0m
+[0m    default: Running: /tmp/vagrant-shell20250925-1445785-a1hwpt.sh[0m
 [0;32m    default: START provisioning.sh[0m
 [0;31m    default: useradd warning: postgres's uid 26 outside of the UID_MIN 1000 and UID_MAX 60000 range.[0m
 [0;31m    default: useradd warning: barman's uid 426 outside of the UID_MIN 1000 and UID_MAX 60000 range.[0m
-[0;32m    default: Rocky Linux 10 - BaseOS                          13 MB/s |  18 MB     00:01[0m
-[0;32m    default: Rocky Linux 10 - AppStream                      6.7 MB/s | 2.1 MB     00:00[0m
-[0;32m    default: Rocky Linux 10 - Extras                          25 kB/s | 5.1 kB     00:00[0m
-[0;32m    default: pgdg-redhat-repo-latest.noarch.rpm              283 kB/s |  13 kB     00:00[0m
+[0;32m    default: Rocky Linux 10 - BaseOS                         3.5 MB/s |  18 MB     00:04[0m
+[0;32m    default: Rocky Linux 10 - AppStream                      6.4 MB/s | 2.1 MB     00:00[0m
+[0;32m    default: Rocky Linux 10 - Extras                          21 kB/s | 5.1 kB     00:00[0m
+[0;32m    default: pgdg-redhat-repo-latest.noarch.rpm              341 kB/s |  13 kB     00:00[0m
 [0;32m    default: Dependencies resolved.[0m
 [0;32m    default: ================================================================================[0m
 [0;32m    default:  Package                Architecture Version           Repository          Size[0m
@@ -164,7 +164,7 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;31m    default: Unable to resolve argument postgresql[0m
 [0;31m    default: Error: Problems in request:[0m
 [0;31m    default: missing groups or modules: postgresql[0m
-[0;32m    default: Last metadata expiration check: 0:00:01 ago on Wed 24 Sep 2025 05:37:45 PM CEST.[0m
+[0;32m    default: Last metadata expiration check: 0:00:02 ago on Thu 25 Sep 2025 02:18:09 PM CEST.[0m
 [0;32m    default: Dependencies resolved.[0m
 [0;32m    default: ================================================================================[0m
 [0;32m    default:  Package                  Arch     Version                    Repository   Size[0m
@@ -242,70 +242,70 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: Total download size: 17 M[0m
 [0;32m    default: Installed size: 66 M[0m
 [0;32m    default: Downloading Packages:[0m
-[0;32m    default: (1/62): postgresql17-libs-17.6-1PGDG.rhel10.x86 2.5 MB/s | 345 kB     00:00[0m
-[0;32m    default: (2/62): postgresql17-17.6-1PGDG.rhel10.x86_64.r 9.2 MB/s | 1.9 MB     00:00[0m
-[0;32m    default: (3/62): postgresql17-contrib-17.6-1PGDG.rhel10. 1.9 MB/s | 731 kB     00:00[0m
-[0;32m    default: (4/62): perl-AutoLoader-5.74-512.2.el10_0.noarc  85 kB/s |  21 kB     00:00[0m
-[0;32m    default: (5/62): perl-Carp-1.54-511.el10.noarch.rpm      1.3 MB/s |  29 kB     00:00[0m
-[0;32m    default: (6/62): perl-B-1.89-512.2.el10_0.x86_64.rpm     1.5 MB/s | 180 kB     00:00[0m
-[0;32m    default: (7/62): perl-Class-Struct-0.68-512.2.el10_0.noa 478 kB/s |  22 kB     00:00[0m
-[0;32m    default: (8/62): perl-Data-Dumper-2.189-512.el10.x86_64. 1.5 MB/s |  56 kB     00:00[0m
-[0;32m    default: (9/62): postgresql17-server-17.6-1PGDG.rhel10.x  14 MB/s | 7.0 MB     00:00[0m
-[0;32m    default: (10/62): perl-Digest-1.20-511.el10.noarch.rpm   197 kB/s |  25 kB     00:00[0m
-[0;32m    default: (11/62): perl-Digest-MD5-2.59-6.el10.x86_64.rpm 291 kB/s |  36 kB     00:00[0m
-[0;32m    default: (12/62): perl-DynaLoader-1.56-512.2.el10_0.x86_ 2.9 MB/s |  26 kB     00:00[0m
-[0;32m    default: (13/62): perl-Exporter-5.78-511.el10.noarch.rpm 3.4 MB/s |  31 kB     00:00[0m
-[0;32m    default: (14/62): perl-Fcntl-1.18-512.2.el10_0.x86_64.rp 3.0 MB/s |  30 kB     00:00[0m
-[0;32m    default: (15/62): perl-Errno-1.38-512.2.el10_0.x86_64.rp 520 kB/s |  15 kB     00:00[0m
-[0;32m    default: (16/62): perl-File-Basename-2.86-512.2.el10_0.n 2.0 MB/s |  17 kB     00:00[0m
-[0;32m    default: (17/62): perl-File-Path-2.18-511.el10.noarch.rp 2.2 MB/s |  35 kB     00:00[0m
-[0;32m    default: (18/62): perl-File-Temp-0.231.100-512.el10.noar 3.8 MB/s |  59 kB     00:00[0m
-[0;32m    default: (19/62): perl-File-stat-1.14-512.2.el10_0.noarc 2.0 MB/s |  17 kB     00:00[0m
-[0;32m    default: (20/62): perl-FileHandle-2.05-512.2.el10_0.noar 1.7 MB/s |  15 kB     00:00[0m
-[0;32m    default: (21/62): perl-Getopt-Long-2.58-3.el10.noarch.rp 5.5 MB/s |  64 kB     00:00[0m
-[0;32m    default: (22/62): perl-Getopt-Std-1.14-512.2.el10_0.noar 1.5 MB/s |  15 kB     00:00[0m
-[0;32m    default: (23/62): perl-Encode-3.21-511.el10.x86_64.rpm    13 MB/s | 1.1 MB     00:00[0m
-[0;32m    default: (24/62): perl-HTTP-Tiny-0.088-512.el10.noarch.r 3.1 MB/s |  56 kB     00:00[0m
-[0;32m    default: (25/62): perl-IO-1.55-512.2.el10_0.x86_64.rpm   4.6 MB/s |  83 kB     00:00[0m
-[0;32m    default: (26/62): perl-IO-Socket-IP-0.42-512.el10.noarch 4.6 MB/s |  42 kB     00:00[0m
-[0;32m    default: (27/62): perl-IPC-Open3-1.22-512.2.el10_0.noarc 143 kB/s |  22 kB     00:00[0m
-[0;32m    default: (28/62): perl-MIME-Base64-3.16-511.el10.x86_64. 198 kB/s |  30 kB     00:00[0m
-[0;32m    default: (29/62): perl-IO-Socket-SSL-2.085-3.el10.noarch 1.0 MB/s | 229 kB     00:00[0m
-[0;32m    default: (30/62): perl-Mozilla-CA-20231213-5.el10.noarch 201 kB/s |  14 kB     00:00[0m
-[0;32m    default: (31/62): perl-NDBM_File-1.17-512.2.el10_0.x86_6 330 kB/s |  22 kB     00:00[0m
-[0;32m    default: (32/62): perl-POSIX-2.20-512.2.el10_0.x86_64.rp 5.7 MB/s |  96 kB     00:00[0m
-[0;32m    default: (33/62): perl-PathTools-3.91-512.el10.x86_64.rp 4.5 MB/s |  88 kB     00:00[0m
-[0;32m    default: (34/62): perl-Pod-Escapes-1.07-511.el10.noarch. 2.1 MB/s |  20 kB     00:00[0m
-[0;32m    default: (35/62): perl-Pod-Perldoc-3.28.01-512.el10.noar 7.7 MB/s |  87 kB     00:00[0m
-[0;32m    default: (36/62): perl-Pod-Usage-2.03-511.el10.noarch.rp 3.1 MB/s |  40 kB     00:00[0m
-[0;32m    default: (37/62): perl-Pod-Simple-3.45-511.el10.noarch.r 9.4 MB/s | 221 kB     00:00[0m
-[0;32m    default: (38/62): perl-Scalar-List-Utils-1.63-511.el10.x 6.4 MB/s |  73 kB     00:00[0m
-[0;32m    default: (39/62): perl-SelectSaver-1.02-512.2.el10_0.noa 391 kB/s |  11 kB     00:00[0m
-[0;32m    default: (40/62): perl-Net-SSLeay-1.94-7.el10.x86_64.rpm 4.1 MB/s | 382 kB     00:00[0m
-[0;32m    default: (41/62): perl-Socket-2.038-511.el10.x86_64.rpm  1.8 MB/s |  55 kB     00:00[0m
-[0;32m    default: (42/62): perl-Storable-3.32-511.el10.x86_64.rpm 6.7 MB/s |  98 kB     00:00[0m
-[0;32m    default: (43/62): perl-Symbol-1.09-512.2.el10_0.noarch.r 1.5 MB/s |  14 kB     00:00[0m
-[0;32m    default: (44/62): perl-Term-ANSIColor-5.01-512.el10.noar 4.2 MB/s |  48 kB     00:00[0m
-[0;32m    default: (45/62): perl-Term-Cap-1.18-511.el10.noarch.rpm 2.5 MB/s |  22 kB     00:00[0m
+[0;32m    default: (1/62): postgresql17-contrib-17.6-1PGDG.rhel10. 8.1 MB/s | 731 kB     00:00[0m
+[0;32m    default: (2/62): postgresql17-libs-17.6-1PGDG.rhel10.x86 3.1 MB/s | 345 kB     00:00[0m
+[0;32m    default: (3/62): perl-AutoLoader-5.74-512.2.el10_0.noarc 559 kB/s |  21 kB     00:00[0m
+[0;32m    default: (4/62): perl-B-1.89-512.2.el10_0.x86_64.rpm     4.1 MB/s | 180 kB     00:00[0m
+[0;32m    default: (5/62): perl-Carp-1.54-511.el10.noarch.rpm      1.1 MB/s |  29 kB     00:00[0m
+[0;32m    default: (6/62): postgresql17-17.6-1PGDG.rhel10.x86_64.r 7.9 MB/s | 1.9 MB     00:00[0m
+[0;32m    default: (7/62): perl-Class-Struct-0.68-512.2.el10_0.noa 824 kB/s |  22 kB     00:00[0m
+[0;32m    default: (8/62): perl-Data-Dumper-2.189-512.el10.x86_64. 2.4 MB/s |  56 kB     00:00[0m
+[0;32m    default: (9/62): perl-Digest-MD5-2.59-6.el10.x86_64.rpm  843 kB/s |  36 kB     00:00[0m
+[0;32m    default: (10/62): perl-Digest-1.20-511.el10.noarch.rpm   373 kB/s |  25 kB     00:00[0m
+[0;32m    default: (11/62): perl-DynaLoader-1.56-512.2.el10_0.x86_ 1.1 MB/s |  26 kB     00:00[0m
+[0;32m    default: (12/62): perl-Errno-1.38-512.2.el10_0.x86_64.rp 573 kB/s |  15 kB     00:00[0m
+[0;32m    default: (13/62): perl-Exporter-5.78-511.el10.noarch.rpm 995 kB/s |  31 kB     00:00[0m
+[0;32m    default: (14/62): perl-Encode-3.21-511.el10.x86_64.rpm    10 MB/s | 1.1 MB     00:00[0m
+[0;32m    default: (15/62): perl-Fcntl-1.18-512.2.el10_0.x86_64.rp 1.1 MB/s |  30 kB     00:00[0m
+[0;32m    default: (16/62): perl-File-Basename-2.86-512.2.el10_0.n 827 kB/s |  17 kB     00:00[0m
+[0;32m    default: (17/62): perl-File-Path-2.18-511.el10.noarch.rp 1.5 MB/s |  35 kB     00:00[0m
+[0;32m    default: (18/62): perl-File-Temp-0.231.100-512.el10.noar 1.5 MB/s |  59 kB     00:00[0m
+[0;32m    default: (19/62): perl-File-stat-1.14-512.2.el10_0.noarc 475 kB/s |  17 kB     00:00[0m
+[0;32m    default: (20/62): perl-FileHandle-2.05-512.2.el10_0.noar 644 kB/s |  15 kB     00:00[0m
+[0;32m    default: (21/62): perl-Getopt-Long-2.58-3.el10.noarch.rp 1.6 MB/s |  64 kB     00:00[0m
+[0;32m    default: (22/62): perl-Getopt-Std-1.14-512.2.el10_0.noar 573 kB/s |  15 kB     00:00[0m
+[0;32m    default: (23/62): perl-HTTP-Tiny-0.088-512.el10.noarch.r 1.0 MB/s |  56 kB     00:00[0m
+[0;32m    default: (24/62): perl-IO-1.55-512.2.el10_0.x86_64.rpm   1.7 MB/s |  83 kB     00:00[0m
+[0;32m    default: (25/62): postgresql17-server-17.6-1PGDG.rhel10.  12 MB/s | 7.0 MB     00:00[0m
+[0;32m    default: (26/62): perl-IO-Socket-IP-0.42-512.el10.noarch 420 kB/s |  42 kB     00:00[0m
+[0;32m    default: (27/62): perl-IO-Socket-SSL-2.085-3.el10.noarch 2.2 MB/s | 229 kB     00:00[0m
+[0;32m    default: (28/62): perl-IPC-Open3-1.22-512.2.el10_0.noarc 2.0 MB/s |  22 kB     00:00[0m
+[0;32m    default: (29/62): perl-MIME-Base64-3.16-511.el10.x86_64. 2.6 MB/s |  30 kB     00:00[0m
+[0;32m    default: (30/62): perl-Mozilla-CA-20231213-5.el10.noarch 1.6 MB/s |  14 kB     00:00[0m
+[0;32m    default: (31/62): perl-NDBM_File-1.17-512.2.el10_0.x86_6 2.6 MB/s |  22 kB     00:00[0m
+[0;32m    default: (32/62): perl-POSIX-2.20-512.2.el10_0.x86_64.rp 7.8 MB/s |  96 kB     00:00[0m
+[0;32m    default: (33/62): perl-PathTools-3.91-512.el10.x86_64.rp 6.6 MB/s |  88 kB     00:00[0m
+[0;32m    default: (34/62): perl-Pod-Escapes-1.07-511.el10.noarch. 2.3 MB/s |  20 kB     00:00[0m
+[0;32m    default: (35/62): perl-Pod-Perldoc-3.28.01-512.el10.noar 7.6 MB/s |  87 kB     00:00[0m
+[0;32m    default: (36/62): perl-Pod-Usage-2.03-511.el10.noarch.rp 1.5 MB/s |  40 kB     00:00[0m
+[0;32m    default: (37/62): perl-Net-SSLeay-1.94-7.el10.x86_64.rpm 4.4 MB/s | 382 kB     00:00[0m
+[0;32m    default: (38/62): perl-Pod-Simple-3.45-511.el10.noarch.r 3.3 MB/s | 221 kB     00:00[0m
+[0;32m    default: (39/62): perl-Scalar-List-Utils-1.63-511.el10.x 2.0 MB/s |  73 kB     00:00[0m
+[0;32m    default: (40/62): perl-SelectSaver-1.02-512.2.el10_0.noa 1.3 MB/s |  11 kB     00:00[0m
+[0;32m    default: (41/62): perl-Socket-2.038-511.el10.x86_64.rpm  4.5 MB/s |  55 kB     00:00[0m
+[0;32m    default: (42/62): perl-Storable-3.32-511.el10.x86_64.rpm 6.9 MB/s |  98 kB     00:00[0m
+[0;32m    default: (43/62): perl-Symbol-1.09-512.2.el10_0.noarch.r 1.4 MB/s |  14 kB     00:00[0m
+[0;32m    default: (44/62): perl-Term-ANSIColor-5.01-512.el10.noar 4.4 MB/s |  48 kB     00:00[0m
+[0;32m    default: (45/62): perl-Term-Cap-1.18-511.el10.noarch.rpm 2.6 MB/s |  22 kB     00:00[0m
 [0;32m    default: (46/62): perl-Text-ParseWords-3.31-511.el10.noa 1.7 MB/s |  16 kB     00:00[0m
 [0;32m    default: (47/62): perl-Text-Tabs+Wrap-2024.001-511.el10. 2.2 MB/s |  22 kB     00:00[0m
-[0;32m    default: (48/62): perl-Time-Local-1.350-511.el10.noarch. 4.2 MB/s |  34 kB     00:00[0m
-[0;32m    default: (49/62): perl-URI-5.27-3.el10.noarch.rpm         10 MB/s | 136 kB     00:00[0m
-[0;32m    default: (50/62): perl-base-2.27-512.2.el10_0.noarch.rpm 1.2 MB/s |  16 kB     00:00[0m
-[0;32m    default: (51/62): perl-constant-1.33-512.el10.noarch.rpm 2.1 MB/s |  23 kB     00:00[0m
-[0;32m    default: (52/62): perl-if-0.61.000-512.2.el10_0.noarch.r 1.6 MB/s |  14 kB     00:00[0m
-[0;32m    default: (53/62): perl-interpreter-5.40.2-512.2.el10_0.x 6.4 MB/s |  72 kB     00:00[0m
-[0;32m    default: (54/62): perl-libnet-3.15-512.el10.noarch.rpm   7.8 MB/s | 130 kB     00:00[0m
-[0;32m    default: (55/62): perl-locale-1.12-512.2.el10_0.noarch.r 1.7 MB/s |  13 kB     00:00[0m
-[0;32m    default: (56/62): perl-mro-1.29-512.2.el10_0.x86_64.rpm  3.5 MB/s |  30 kB     00:00[0m
-[0;32m    default: (57/62): perl-overload-1.37-512.2.el10_0.noarch 1.5 MB/s |  45 kB     00:00[0m
-[0;32m    default: (58/62): perl-overloading-0.02-512.2.el10_0.noa 496 kB/s |  13 kB     00:00[0m
-[0;32m    default: (59/62): perl-parent-0.241-512.el10.noarch.rpm  1.6 MB/s |  15 kB     00:00[0m
-[0;32m    default: (60/62): perl-podlators-5.01-511.el10.noarch.rp 8.8 MB/s | 126 kB     00:00[0m
-[0;32m    default: (61/62): perl-vars-1.05-512.2.el10_0.noarch.rpm 1.2 MB/s |  13 kB     00:00[0m
+[0;32m    default: (48/62): perl-Time-Local-1.350-511.el10.noarch. 4.0 MB/s |  34 kB     00:00[0m
+[0;32m    default: (49/62): perl-URI-5.27-3.el10.noarch.rpm        9.5 MB/s | 136 kB     00:00[0m
+[0;32m    default: (50/62): perl-base-2.27-512.2.el10_0.noarch.rpm 1.1 MB/s |  16 kB     00:00[0m
+[0;32m    default: (51/62): perl-constant-1.33-512.el10.noarch.rpm 1.6 MB/s |  23 kB     00:00[0m
+[0;32m    default: (52/62): perl-if-0.61.000-512.2.el10_0.noarch.r 1.7 MB/s |  14 kB     00:00[0m
+[0;32m    default: (53/62): perl-interpreter-5.40.2-512.2.el10_0.x 4.5 MB/s |  72 kB     00:00[0m
+[0;32m    default: (54/62): perl-libnet-3.15-512.el10.noarch.rpm   3.8 MB/s | 130 kB     00:00[0m
+[0;32m    default: (55/62): perl-locale-1.12-512.2.el10_0.noarch.r 784 kB/s |  13 kB     00:00[0m
+[0;32m    default: (56/62): perl-mro-1.29-512.2.el10_0.x86_64.rpm  1.2 MB/s |  30 kB     00:00[0m
+[0;32m    default: (57/62): perl-overload-1.37-512.2.el10_0.noarch 1.7 MB/s |  45 kB     00:00[0m
+[0;32m    default: (58/62): perl-overloading-0.02-512.2.el10_0.noa 531 kB/s |  13 kB     00:00[0m
+[0;32m    default: (59/62): perl-parent-0.241-512.el10.noarch.rpm  651 kB/s |  15 kB     00:00[0m
+[0;32m    default: (60/62): perl-podlators-5.01-511.el10.noarch.rp 5.5 MB/s | 126 kB     00:00[0m
+[0;32m    default: (61/62): perl-vars-1.05-512.2.el10_0.noarch.rpm 583 kB/s |  13 kB     00:00[0m
 [0;32m    default: (62/62): perl-libs-5.40.2-512.2.el10_0.x86_64.r  15 MB/s | 2.4 MB     00:00[0m
 [0;32m    default: --------------------------------------------------------------------------------[0m
-[0;32m    default: Total                                            12 MB/s |  17 MB     00:01[0m
+[0;32m    default: Total                                            14 MB/s |  17 MB     00:01[0m
 [0;32m    default: PostgreSQL 17 for RHEL / Rocky / AlmaLinux 10 - 2.4 MB/s | 2.4 kB     00:00[0m
 [0;31m    default: Importing GPG key 0x08B40D20:[0m
 [0;31m    default:  Userid     : "PostgreSQL RPM Repository <pgsql-pkg-yum@lists.postgresql.org>"[0m
@@ -457,13 +457,13 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default:   postgresql17-server-17.6-1PGDG.rhel10.x86_64[0m
 [0;32m    default: [0m
 [0;32m    default: Complete![0m
-[0;32m    default: Last metadata expiration check: 0:00:12 ago on Wed 24 Sep 2025 05:37:45 PM CEST.[0m
+[0;32m    default: Last metadata expiration check: 0:00:12 ago on Thu 25 Sep 2025 02:18:09 PM CEST.[0m
 [0;32m    default: Package postgresql17-server-17.6-1PGDG.rhel10.x86_64 is already installed.[0m
 [0;32m    default: Dependencies resolved.[0m
 [0;32m    default: Nothing to do.[0m
 [0;32m    default: Complete![0m
 [0;31m    default: Created symlink '/etc/systemd/system/multi-user.target.wants/postgresql-17.service' → '/usr/lib/systemd/system/postgresql-17.service'.[0m
-[0;32m    default: Last metadata expiration check: 0:00:14 ago on Wed 24 Sep 2025 05:37:45 PM CEST.[0m
+[0;32m    default: Last metadata expiration check: 0:00:14 ago on Thu 25 Sep 2025 02:18:09 PM CEST.[0m
 [0;32m    default: Dependencies resolved.[0m
 [0;32m    default: ================================================================================[0m
 [0;32m    default:  Package          Architecture  Version                     Repository     Size[0m
@@ -478,9 +478,9 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: Total download size: 65 k[0m
 [0;32m    default: Installed size: 204 k[0m
 [0;32m    default: Downloading Packages:[0m
-[0;32m    default: pg_tle_17-1.5.1-1PGDG.rhel10.x86_64.rpm         955 kB/s |  65 kB     00:00[0m
+[0;32m    default: pg_tle_17-1.5.1-1PGDG.rhel10.x86_64.rpm         1.1 MB/s |  65 kB     00:00[0m
 [0;32m    default: --------------------------------------------------------------------------------[0m
-[0;32m    default: Total                                           915 kB/s |  65 kB     00:00[0m
+[0;32m    default: Total                                           1.1 MB/s |  65 kB     00:00[0m
 [0;32m    default: Running transaction check[0m
 [0;32m    default: Transaction check succeeded.[0m
 [0;32m    default: Running transaction test[0m
@@ -626,8 +626,8 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: <<<<<[0m
 [0;32m    default: waiting for server to shut down.... done[0m
 [0;32m    default: server stopped[0m
-[0;32m    default: waiting for server to start....2025-09-24 17:38:54.162 CEST [18816] LOG:  redirecting log output to logging collector process[0m
-[0;32m    default: 2025-09-24 17:38:54.162 CEST [18816] HINT:  Future log output will appear in directory "log".[0m
+[0;32m    default: waiting for server to start....2025-09-25 14:19:18.886 CEST [18785] LOG:  redirecting log output to logging collector process[0m
+[0;32m    default: 2025-09-25 14:19:18.886 CEST [18785] HINT:  Future log output will appear in directory "log".[0m
 [0;32m    default:  done[0m
 [0;32m    default: server started[0m
 [0;32m    default: You are connected to database "pwdb" as user "test" on host "127.0.0.1" at port "5432".[0m
@@ -643,8 +643,8 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: (1 row)[0m
 [0;32m    default: [0m
 [0;32m    default: ALTER USER user1 PASSWORD '123456789';[0m
-[0;32m    default: SELECT pg_sleep(1);[0m
 [0;31m    default: psql:/tmp/testscript.sql:5: ERROR:  password must contain both letters and nonletters[0m
+[0;32m    default: SELECT pg_sleep(1);[0m
 [0;32m    default:  pg_sleep[0m
 [0;32m    default: ----------[0m
 [0;32m    default: [0m
@@ -659,8 +659,8 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: (1 row)[0m
 [0;32m    default: [0m
 [0;32m    default: ALTER USER user1 PASSWORD 'user1user1';[0m
-[0;32m    default: SELECT pg_sleep(1);[0m
 [0;31m    default: psql:/tmp/testscript.sql:9: ERROR:  password must not contain user name[0m
+[0;32m    default: SELECT pg_sleep(1);[0m
 [0;32m    default:  pg_sleep[0m
 [0;32m    default: ----------[0m
 [0;32m    default: [0m
@@ -723,8 +723,8 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: ALTER DATABASE[0m
 [0;32m    default: waiting for server to shut down.... done[0m
 [0;32m    default: server stopped[0m
-[0;32m    default: waiting for server to start....2025-09-24 17:39:09.487 CEST [18836] LOG:  redirecting log output to logging collector process[0m
-[0;32m    default: 2025-09-24 17:39:09.487 CEST [18836] HINT:  Future log output will appear in directory "log".[0m
+[0;32m    default: waiting for server to start....2025-09-25 14:19:34.235 CEST [18805] LOG:  redirecting log output to logging collector process[0m
+[0;32m    default: 2025-09-25 14:19:34.235 CEST [18805] HINT:  Future log output will appear in directory "log".[0m
 [0;32m    default:  done[0m
 [0;32m    default: server started[0m
 [0;32m    default: You are connected to database "pwdb" as user "test" on host "127.0.0.1" at port "5432".[0m
@@ -771,8 +771,8 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: (1 row)[0m
 [0;32m    default: [0m
 [0;32m    default: ALTER USER user1 PASSWORD 'NotEnoughNumbers_@';[0m
-[0;31m    default: psql:/tmp/testscript1.sql:7: ERROR:  Password validation failed for user user1: Password must contain at least one number.[0m
 [0;32m    default: SELECT pg_sleep(1);[0m
+[0;31m    default: psql:/tmp/testscript1.sql:7: ERROR:  Password validation failed for user user1: Password must contain at least one number.[0m
 [0;32m    default:  pg_sleep[0m
 [0;32m    default: ----------[0m
 [0;32m    default: [0m
@@ -820,8 +820,8 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: <<<<<[0m
 [0;32m    default: waiting for server to shut down.... done[0m
 [0;32m    default: server stopped[0m
-[0;32m    default: waiting for server to start....2025-09-24 17:39:22.025 CEST [18867] LOG:  redirecting log output to logging collector process[0m
-[0;32m    default: 2025-09-24 17:39:22.025 CEST [18867] HINT:  Future log output will appear in directory "log".[0m
+[0;32m    default: waiting for server to start....2025-09-25 14:19:46.771 CEST [18836] LOG:  redirecting log output to logging collector process[0m
+[0;32m    default: 2025-09-25 14:19:46.771 CEST [18836] HINT:  Future log output will appear in directory "log".[0m
 [0;32m    default:  done[0m
 [0;32m    default: server started[0m
 [0;32m    default: You are connected to database "pwdb" as user "test" on host "127.0.0.1" at port "5432".[0m
@@ -942,8 +942,8 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: <<<<<[0m
 [0;32m    default: waiting for server to shut down.... done[0m
 [0;32m    default: server stopped[0m
-[0;32m    default: waiting for server to start....2025-09-24 17:39:31.866 CEST [18913] LOG:  redirecting log output to logging collector process[0m
-[0;32m    default: 2025-09-24 17:39:31.866 CEST [18913] HINT:  Future log output will appear in directory "log".[0m
+[0;32m    default: waiting for server to start....2025-09-25 14:19:56.588 CEST [18882] LOG:  redirecting log output to logging collector process[0m
+[0;32m    default: 2025-09-25 14:19:56.588 CEST [18882] HINT:  Future log output will appear in directory "log".[0m
 [0;32m    default:  done[0m
 [0;32m    default: server started[0m
 [0;32m    default: You are connected to database "pwdb" as user "test" on host "127.0.0.1" at port "5432".[0m
@@ -955,8 +955,8 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: ALTER EXTENSION[0m
 [0;32m    default: waiting for server to shut down.... done[0m
 [0;32m    default: server stopped[0m
-[0;32m    default: waiting for server to start....2025-09-24 17:39:37.199 CEST [18932] LOG:  redirecting log output to logging collector process[0m
-[0;32m    default: 2025-09-24 17:39:37.199 CEST [18932] HINT:  Future log output will appear in directory "log".[0m
+[0;32m    default: waiting for server to start....2025-09-25 14:20:01.896 CEST [18901] LOG:  redirecting log output to logging collector process[0m
+[0;32m    default: 2025-09-25 14:20:01.896 CEST [18901] HINT:  Future log output will appear in directory "log".[0m
 [0;32m    default:  done[0m
 [0;32m    default: server started[0m
 [0;32m    default: You are connected to database "pwdb" as user "test" on host "127.0.0.1" at port "5432".[0m
@@ -995,7 +995,7 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: $do$;[0m
 [0;32m    default: SELECT pg_sleep(1);[0m
 [0;31m    default: psql:/tmp/testscript4.sql:43: ERROR:  Password validation failed for user test_too_ahead_user: Account validity date cannot be more than 00:15:00 in the future for this role.[0m
-[0;31m    default: CONTEXT:  SQL statement "CREATE USER test_Too_Ahead_user WITH PASSWORD 'CompliantPassw0rd€' VALID UNTIL '2025-10-24 17:39:42.325431+02'"[0m
+[0;31m    default: CONTEXT:  SQL statement "CREATE USER test_Too_Ahead_user WITH PASSWORD 'CompliantPassw0rd€' VALID UNTIL '2025-10-25 14:20:07.011891+02'"[0m
 [0;31m    default: PL/pgSQL function inline_code_block line 3 at EXECUTE[0m
 [0;32m    default:  pg_sleep[0m
 [0;32m    default: ----------[0m
@@ -1005,8 +1005,8 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: [0m
 [0;32m    default: ==> should fail: no valid until null[0m
 [0;32m    default: CREATE ROLE test_null_user WITH PASSWORD 'NullPassw0rd^';[0m
-[0;31m    default: psql:/tmp/testscript4.sql:47: ERROR:  Password validation failed for user test_null_user: New user password must have a "VALID UNTIL" date. "VALID UNTIL NULL" is not allowed.[0m
 [0;32m    default: SELECT pg_sleep(1);[0m
+[0;31m    default: psql:/tmp/testscript4.sql:47: ERROR:  Password validation failed for user test_null_user: New user password must have a "VALID UNTIL" date. "VALID UNTIL NULL" is not allowed.[0m
 [0;32m    default:  pg_sleep[0m
 [0;32m    default: ----------[0m
 [0;32m    default: [0m
@@ -1062,7 +1062,7 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: SELECT username, to_char(change_timestamp, 'YYYY-MM-DD HH24:MI:SS') as change_timestamp, to_char(valid_until, 'YYYY-MM-DD HH24:MI:SS') as valid_until, to_char( now(), 'YYYY-MM-DD HH24:MI:SS') as NOW FROM password_check.password_history WHERE USERNAME like '%orking_user';[0m
 [0;32m    default:    username   |  change_timestamp   |     valid_until     |         now[0m
 [0;32m    default: --------------+---------------------+---------------------+---------------------[0m
-[0;32m    default:  working_user | 2025-09-24 17:39:44 | 2025-09-24 17:54:44 | 2025-09-24 17:39:44[0m
+[0;32m    default:  working_user | 2025-09-25 14:20:09 | 2025-09-25 14:35:09 | 2025-09-25 14:20:09[0m
 [0;32m    default: (1 row)[0m
 [0;32m    default: [0m
 [0;32m    default: DO[0m
@@ -1104,10 +1104,10 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: [0m
 [0;32m    default:     username    |  change_timestamp   |     valid_until     |         now[0m
 [0;32m    default: ----------------+---------------------+---------------------+---------------------[0m
-[0;32m    default:  compliant_user | 2025-09-24 17:39:44 | 2025-09-24 17:54:44 | 2025-09-24 17:40:47[0m
-[0;32m    default:  working_user   | 2025-09-24 17:39:44 | 2025-09-24 17:54:44 | 2025-09-24 17:40:47[0m
-[0;32m    default:  expiring_user  | 2025-09-24 17:39:44 | 2025-09-24 17:54:44 | 2025-09-24 17:40:47[0m
-[0;32m    default:  expiring_user  | 2025-09-24 17:40:46 | 2025-09-25 17:40:46 | 2025-09-24 17:40:47[0m
+[0;32m    default:  compliant_user | 2025-09-25 14:20:09 | 2025-09-25 14:35:09 | 2025-09-25 14:21:12[0m
+[0;32m    default:  working_user   | 2025-09-25 14:20:09 | 2025-09-25 14:35:09 | 2025-09-25 14:21:12[0m
+[0;32m    default:  expiring_user  | 2025-09-25 14:20:09 | 2025-09-25 14:35:09 | 2025-09-25 14:21:12[0m
+[0;32m    default:  expiring_user  | 2025-09-25 14:21:11 | 2025-09-26 14:21:11 | 2025-09-25 14:21:12[0m
 [0;32m    default: (4 rows)[0m
 [0;32m    default: [0m
 [0;32m    default: <<< end testscript 0.4 shell part <<<[0m
@@ -1178,7 +1178,7 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: select username, failed_attempts, to_char(last_successful_login , 'YYYY-MM-DD HH24:MI:SS') as last_successful_login , to_char(last_activity, 'YYYY-MM-DD HH24:MI:SS') as last_activity from password_check.user_login_activity where username='test_badpw_user';[0m
 [0;32m    default:     username     | failed_attempts | last_successful_login |    last_activity[0m
 [0;32m    default: -----------------+-----------------+-----------------------+---------------------[0m
-[0;32m    default:  test_badpw_user |               5 | 2025-09-24 17:40:47   | 2025-09-24 17:40:49[0m
+[0;32m    default:  test_badpw_user |               5 | 2025-09-25 14:21:12   | 2025-09-25 14:21:13[0m
 [0;32m    default: (1 row)[0m
 [0;32m    default: [0m
 [0;32m    default: [0m
@@ -1192,7 +1192,7 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: select username, failed_attempts, to_char(last_successful_login , 'YYYY-MM-DD HH24:MI:SS') as last_successful_login , to_char(last_activity, 'YYYY-MM-DD HH24:MI:SS') as last_activity from password_check.user_login_activity where username='test_badpw_user';[0m
 [0;32m    default:     username     | failed_attempts | last_successful_login |    last_activity[0m
 [0;32m    default: -----------------+-----------------+-----------------------+---------------------[0m
-[0;32m    default:  test_badpw_user |               9 | 2025-09-24 17:40:47   | 2025-09-24 17:40:49[0m
+[0;32m    default:  test_badpw_user |               9 | 2025-09-25 14:21:12   | 2025-09-25 14:21:13[0m
 [0;32m    default: (1 row)[0m
 [0;32m    default: [0m
 [0;32m    default: ==> Should fail 1 more time (=10):[0m
@@ -1200,15 +1200,15 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: [0m
 [0;32m    default: ==> OOPS!:[0m
 [0;32m    default: [0m
-[0;31m    default: psql: error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  Account test_badpw_user has been locked due to too many failed authentication attempts. Try again after 2025-09-24 18:10:49.204529+02.[0m
+[0;31m    default: psql: error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  Account test_badpw_user has been locked due to too many failed authentication attempts. Try again after 2025-09-25 14:51:13.847214+02.[0m
 [0;32m    default: [0m
 [0;32m    default: ==> Should be locked now even with correct password:[0m
-[0;31m    default: psql: error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  Account test_badpw_user has been locked due to too many failed authentication attempts. Try again after 2025-09-24 18:10:49.204529+02.[0m
+[0;31m    default: psql: error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  Account test_badpw_user has been locked due to too many failed authentication attempts. Try again after 2025-09-25 14:51:13.847214+02.[0m
 [0;32m    default: [0m
 [0;32m    default: select username, to_char(locked_until , 'YYYY-MM-DD HH24:MI:SS') as locked_until, locked_by from password_check.locked_accounts;[0m
 [0;32m    default:     username     |    locked_until     | locked_by[0m
 [0;32m    default: -----------------+---------------------+-----------[0m
-[0;32m    default:  test_badpw_user | 2025-09-24 18:10:49 | SYSTEM[0m
+[0;32m    default:  test_badpw_user | 2025-09-25 14:51:13 | SYSTEM[0m
 [0;32m    default: (1 row)[0m
 [0;32m    default: [0m
 [0;32m    default: [0m
@@ -1269,21 +1269,51 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: END;[0m
 [0;32m    default: $do$;[0m
 [0;32m    default: GRANT pci_admin_users TO test_bad_pw_user;[0m
-[0;31m    default: psql:/tmp/testscript6.sql:18: ERROR:  Password validation failed for user test_bad_pw_user: Password is too common, known to be insecure, or a default value. Please choose a different password.[0m
-[0;31m    default: CONTEXT:  SQL statement "CREATE USER test_bad_pw_user WITH PASSWORD 'Wachtw0ordJ€' VALID UNTIL '2025-09-24 17:50:52.474097+02'"[0m
+[0;31m    default: psql:/tmp/testscript6.sql:17: ERROR:  Password validation failed for user test_bad_pw_user: Password is too common, known to be insecure, or a default value. Please choose a different password.[0m
+[0;31m    default: CONTEXT:  SQL statement "CREATE USER test_bad_pw_user WITH PASSWORD 'Wachtw0ordJ€' VALID UNTIL '2025-09-25 14:31:17.138614+02'"[0m
 [0;31m    default: PL/pgSQL function inline_code_block line 3 at EXECUTE[0m
-[0;31m    default: psql:/tmp/testscript6.sql:20: ERROR:  role "test_bad_pw_user" does not exist[0m
 [0;32m    default: GRANT ALL ON DATABASE pwdb TO test_bad_pw_user;[0m
+[0;31m    default: psql:/tmp/testscript6.sql:19: ERROR:  role "test_bad_pw_user" does not exist[0m
 [0;32m    default: DO[0m
 [0;32m    default: $do$[0m
 [0;32m    default: BEGIN[0m
 [0;32m    default:   EXECUTE format($$ALTER ROLE test_bad_pw_user VALID UNTIL %L$$, NOW() + INTERVAL '29 days');[0m
 [0;32m    default: END;[0m
 [0;32m    default: $do$;[0m
-[0;31m    default: psql:/tmp/testscript6.sql:21: ERROR:  role "test_bad_pw_user" does not exist[0m
+[0;31m    default: psql:/tmp/testscript6.sql:20: ERROR:  role "test_bad_pw_user" does not exist[0m
 [0;32m    default: SELECT pg_sleep(1);[0m
-[0;31m    default: psql:/tmp/testscript6.sql:27: ERROR:  role "test_bad_pw_user" does not exist[0m
-[0;31m    default: CONTEXT:  SQL statement "ALTER ROLE test_bad_pw_user VALID UNTIL '2025-10-23 17:40:52.49772+02'"[0m
+[0;31m    default: psql:/tmp/testscript6.sql:26: ERROR:  role "test_bad_pw_user" does not exist[0m
+[0;31m    default: CONTEXT:  SQL statement "ALTER ROLE test_bad_pw_user VALID UNTIL '2025-10-24 14:21:17.161499+02'"[0m
+[0;31m    default: PL/pgSQL function inline_code_block line 3 at EXECUTE[0m
+[0;32m    default:  pg_sleep[0m
+[0;32m    default: ----------[0m
+[0;32m    default: [0m
+[0;32m    default: (1 row)[0m
+[0;32m    default: [0m
+[0;32m    default: [0m
+[0;32m    default: ==> Now see if we can get it too just not work because the username as password:[0m
+[0;32m    default: DO[0m
+[0;32m    default: $do$[0m
+[0;32m    default: BEGIN[0m
+[0;32m    default:   EXECUTE format($$CREATE USER bad_pw_user WITH PASSWORD 'Xbad_pw_user123!' VALID UNTIL %L$$, NOW() + INTERVAL '10 minutes');[0m
+[0;32m    default: END;[0m
+[0;32m    default: $do$;[0m
+[0;32m    default: GRANT pci_admin_users TO bad_pw_user;[0m
+[0;31m    default: psql:/tmp/testscript6.sql:36: ERROR:  password must not contain user name[0m
+[0;31m    default: CONTEXT:  SQL statement "CREATE USER bad_pw_user WITH PASSWORD 'Xbad_pw_user123!' VALID UNTIL '2025-09-25 14:31:18.164009+02'"[0m
+[0;31m    default: PL/pgSQL function inline_code_block line 3 at EXECUTE[0m
+[0;31m    default: psql:/tmp/testscript6.sql:38: ERROR:  role "bad_pw_user" does not exist[0m
+[0;32m    default: GRANT ALL ON DATABASE pwdb TO bad_pw_user;[0m
+[0;31m    default: psql:/tmp/testscript6.sql:39: ERROR:  role "bad_pw_user" does not exist[0m
+[0;32m    default: DO[0m
+[0;32m    default: $do$[0m
+[0;32m    default: BEGIN[0m
+[0;32m    default:   EXECUTE format($$ALTER ROLE bad_pw_user VALID UNTIL %L$$, NOW() + INTERVAL '29 days');[0m
+[0;32m    default: END;[0m
+[0;32m    default: $do$;[0m
+[0;32m    default: SELECT pg_sleep(1);[0m
+[0;31m    default: psql:/tmp/testscript6.sql:45: ERROR:  role "bad_pw_user" does not exist[0m
+[0;31m    default: CONTEXT:  SQL statement "ALTER ROLE bad_pw_user VALID UNTIL '2025-10-24 14:21:18.165015+02'"[0m
 [0;31m    default: PL/pgSQL function inline_code_block line 3 at EXECUTE[0m
 [0;32m    default:  pg_sleep[0m
 [0;32m    default: ----------[0m
@@ -1293,8 +1323,9 @@ Script started on 2025-09-24 17:36:11+02:00 [TERM="xterm-256color" TTY="/dev/pts
 [0;32m    default: <<< end testscript 0.6 SQL <<<[0m
 [0;32m    default: >>> begin testscript 0.6 shell >>>[0m
 [0;32m    default: [0m
-[0;32m    default: ==> Should fail contains "wachtwoordJ€123"[0m
+[0;32m    default: ==> Should fail contains "Wachtw0ordJ€"[0m
 [0;31m    default: psql: error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "test_bad_pw_user"[0m
+[0;31m    default: psql: error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  password authentication failed for user "bad_pw_user"[0m
 [0;32m    default: <<< end testscript 0.6 shell <<<[0m
 
-Script done on 2025-09-24 17:40:53+02:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2025-09-25 14:21:19+02:00 [COMMAND_EXIT_CODE="0"]

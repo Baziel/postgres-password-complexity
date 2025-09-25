@@ -1,1 +1,1 @@
-{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/opt/VagrantMachines/pg17","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/opt/VagrantMachines/postgres-password-complexity","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
