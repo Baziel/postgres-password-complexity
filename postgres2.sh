@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 echo '>>>> START postgres2.sh <<<<<'
 export PGDATA=/pgdata/data
 export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/pgsql-17/bin"
