@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 echo START provisioning.sh
 if [ -f ../provisioning_private.sh ]; then
 	echo "../provisioning_private.sh"
