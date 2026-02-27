@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 cd hey-dba-pgtle-pcidss/ || exit
 git pull
 cd ..
