@@ -6,7 +6,7 @@ export LOGNAME="postgres"
 . /var/lib/pgsql/.bash_profile
 
 sleep 5
-cd /pgdata/data
+cd /pgdata/data || exit
 echo '>>>> 
 
                                         NO RULES / VANILLA POSTGRES 
